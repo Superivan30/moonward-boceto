@@ -378,6 +378,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/script/camarascript.cs"
 "Assets/script/CharacterController2D.cs"
+"Assets/script/Dash.cs"
+"Assets/script/double_jump.cs"
 "Assets/script/player_movement.cs"
 -langversion:9.0
 

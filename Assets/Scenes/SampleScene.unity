@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 433329021}
   - component: {fileID: 433329023}
   - component: {fileID: 433329022}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1412,6 +1412,8 @@ GameObject:
   - component: {fileID: 1282106840}
   - component: {fileID: 1282106841}
   - component: {fileID: 1282106842}
+  - component: {fileID: 1282106843}
+  - component: {fileID: 1282106844}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1522,8 +1524,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.041510403, y: -0.032154977}
-  m_Size: {x: 0.1569792, y: 0.29259723}
+  m_Offset: {x: 0.041510403, y: -0.09996399}
+  m_Size: {x: 0.1569792, y: 0.1569792}
   m_Direction: 0
 --- !u!114 &1282106840
 MonoBehaviour:
@@ -1551,13 +1553,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89ae31ad255e0049a7dcf7fc5553f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
+  m_JumpForce: 50
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.032
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
   m_GroundCheck: {fileID: 1979388934}
   m_CeilingCheck: {fileID: 503177754}
   m_CrouchDisableCollider: {fileID: 1282106842}
@@ -1593,6 +1595,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16450226, y: 0.21900463}
   m_EdgeRadius: 0
+--- !u!114 &1282106843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282106832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e747848e9055340824c40be942c167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1282106838}
+  groundCheck: {fileID: 1979388934}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &1282106844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282106832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 096584cb178ec4f4793071bfa760f4b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extraJumpValue: 2
+  Jumpforce: 5
+  point: {fileID: 1979388934}
+  CheckRadius: 0.2
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1978885252
 GameObject:
   m_ObjectHideFlags: 0
